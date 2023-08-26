@@ -74,6 +74,7 @@
     <Content Include="assets\plus.svg" />
     <Content Include="assets\threads.svg" />
     <Content Include="assets\twitter.svg" />
+    <Content Include="Base de datos\ExamenFinal.sql" />
     <Content Include="Contacto.aspx" />
     <Content Include="css\contacto.css" />
     <Content Include="css\Formulario.css" />
@@ -143,7 +144,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MenuPrincipal.Master" />
-    <Content Include="Base de datos\BaseBLM.ssmssln" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

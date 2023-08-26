@@ -16,8 +16,8 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div cssclass="rigth">
-        <h2 align="center" style="background-color: #99CCFF">Reporte sobre las encuestas</h2>
+    <div cssclass="rigth" class="datagrid">
+        <h2 align="center" style="background-color: #99CCFF; font-style: italic;">Reporte sobre las encuestas</h2>
         <table id="clientListTable" class="auto-style2">
             <thead cssclass="table" >
                 <tr>
@@ -31,19 +31,19 @@
                 <asp:Repeater runat="server" ID="repeaterEncuestas">
                     <ItemTemplate>
                         <tr style="background-color: #99CCFF; color:black">
-                            <td><%# Eval("EncuestaID") %></td>
+                            <td><%# Eval("Numero") %></td>
                             <td><%# Eval("Nombre") %></td>
                             <td><%# Eval("Genero") %></td>
                             <td><%# Eval("Edad") %></td>
-                            <td><%# Eval("CorreoElectronico") %></td>
-                            <td><%# Eval("PartidoPolítico") %></td>
+                            <td><%# Eval("Correo") %></td>
+                            <td><%# Eval("Partido") %></td>
                         </tr>
                     </ItemTemplate>
                 </asp:Repeater>
             </thead>
         </table>
     </div>
-    <div class="button-container" style="font-size: small">
+    <div class="button-container" style="font-size: small; border-radius:6px">
             <a class="button" href="https://es.wikipedia.org/wiki/Tribunal_Supremo_de_Elecciones_de_Costa_Rica" style="font-size: small">Reporte genero</a>
             <a class="button" href="GuiaUso.aspx" style="font-size: small">Cantidad encuestas</a>            
         </div>

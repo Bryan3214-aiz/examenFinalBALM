@@ -10,13 +10,13 @@ namespace examenFinalBALM
 {
     public partial class Reporte : System.Web.UI.Page
     {
-        List<ClsEncuestas> encuestas = ClsEncuestas.ObtenerEncuestas();
+        List<ClsEncuestas> Encuestas = ClsEncuestas.ObtenerEncuestas();
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                CargarClientes();
+                CargarEncuestas();
             }
             else
             {
@@ -25,19 +25,17 @@ namespace examenFinalBALM
         }
         private void LimpiarTabla()
         {
-            encuestas.Clear();
+            Encuestas.Clear();
             repeaterEncuestas.DataSource = null;
             repeaterEncuestas.DataBind();
         }
 
-        private void CargarClientes()
+        private void CargarEncuestas()
         {
             LimpiarTabla();
-            encuestas = ClsEncuestas.ObtenerEncuestas();
-            repeaterEncuestas.DataSource = encuestas;
+            Encuestas = ClsEncuestas.ObtenerEncuestas();
+            repeaterEncuestas.DataSource = Encuestas;
             repeaterEncuestas.DataBind();
         }
-
-
     }
 }

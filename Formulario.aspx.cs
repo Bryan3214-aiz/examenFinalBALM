@@ -11,11 +11,13 @@ namespace examenFinalBALM
 {
     public partial class Formulario1 : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        List<ClsEncuestas> Encuestas = ClsEncuestas.ObtenerEncuestas();
+        public void LimpiarCampos()
         {
-
+            tnombre.Text = string.Empty;
+            tedad.Text = string.Empty;
+            tcorreo.Text = string.Empty;
         }
-
         public void alertas(String texto)
         {
             string message = texto;
@@ -31,15 +33,18 @@ namespace examenFinalBALM
         }
         protected void EnviarEncuesta_Click(object sender, EventArgs e)
         {
-            int resultado = ClsEncuestas.AgregarEncuestas(tnombre.Text,tGenero.Text,tedad.Text,tcorreo.Text,tpartido.Text);
+            int resultado = ClsEncuestas.AgregarEncuestas(tnombre.Text, tGenero.Text, tedad.Text, tcorreo.Text, tpartido.Text);  
 
-            if (resultado > 0)
+            if (IsValid)
             {
-                alertas("Usuario ha sido ingresado con exito");
-            }
-            else
-            {
-                alertas("Error al ingresar Usuario");
+                if (resultado > 0)
+                {
+                    alertas("Encuesta enviada correctamente, gracias por participar :)");
+                }
+                else
+                {
+                    alertas("Error al enviar los datos, intentalo de nuevo :(");
+                }
             }
         }
     }

@@ -143,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MenuPrincipal.Master" />
+    <Content Include="Base de datos\BaseBLM.ssmssln" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

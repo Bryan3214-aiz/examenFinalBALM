@@ -11,7 +11,7 @@ namespace examenFinalBALM
 {
     public partial class Formulario1 : System.Web.UI.Page
     {
-        List<ClsEncuestas> Encuestas = ClsEncuestas.ObtenerEncuestas();
+        List<ClsEncuestas> Encuestas = ClsEncuestas.ObtenerReportes();
         public void LimpiarCampos()
         {
             tnombre.Text = string.Empty;

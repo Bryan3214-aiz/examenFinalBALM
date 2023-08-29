@@ -17,7 +17,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div cssclass="rigth" class="datagrid">
-        <h2 align="center" style="background-color: #99CCFF; font-style: italic;">Reporte sobre las encuestas</h2>
+        <h2 align="center" style="background-color: #99CCFF; font-style: italic; border-radius:6px">Reporte sobre las encuestas</h2>
         <table id="clientListTable" class="auto-style2">
             <thead cssclass="table" >
                 <tr>
@@ -44,8 +44,8 @@
         </table>
     </div>
     <div class="button-container" style="font-size: small; border-radius:6px">
-            <a class="button" href="https://es.wikipedia.org/wiki/Tribunal_Supremo_de_Elecciones_de_Costa_Rica" style="font-size: small">Reporte genero</a>
-            <a class="button" href="GuiaUso.aspx" style="font-size: small">Cantidad encuestas</a>            
+            <a class="button" href="ReporteGenero.aspx" style="font-size: small">Reporte genero</a>
+            <a class="button" href="ReporteCantidadEC.aspx" style="font-size: small">Cantidad encuestas</a>            
         </div>
     <div class="footer">
         Copyright &copy; Bryan Leiva - Todos los derechos 2023

@@ -8,10 +8,9 @@ using System.Web.UI.WebControls;
 
 namespace examenFinalBALM
 {
-    public partial class Reporte : System.Web.UI.Page
+    public partial class ReporteGenero : System.Web.UI.Page
     {
-        List<ClsEncuestas> Encuestas = ClsEncuestas.ObtenerReportes();
-
+        List<ClsReportes> Encuestas = ClsReportes.ObtenerReportes();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -26,16 +25,16 @@ namespace examenFinalBALM
         private void LimpiarTabla()
         {
             Encuestas.Clear();
-            repeaterEncuestas.DataSource = null;
-            repeaterEncuestas.DataBind();
+            repeaterGenero.DataSource = null;
+            repeaterGenero.DataBind();
         }
 
         private void CargarEncuestas()
         {
             LimpiarTabla();
-            Encuestas = ClsEncuestas.ObtenerReportes();
-            repeaterEncuestas.DataSource = Encuestas;
-            repeaterEncuestas.DataBind();
+            Encuestas = ClsReportes.ObtenerReportes();
+            repeaterGenero.DataSource = Encuestas;
+            repeaterGenero.DataBind();
         }
     }
 }

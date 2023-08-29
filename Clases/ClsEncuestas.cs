@@ -70,7 +70,7 @@ namespace examenFinalBALM.Clases
             return retorno;
         }
        
-        public static List<ClsEncuestas> ObtenerEncuestas()
+        public static List<ClsEncuestas> ObtenerReportes()
         {
             int retorno = 0;
             tipoOperacion = 2;

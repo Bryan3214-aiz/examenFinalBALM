@@ -92,11 +92,15 @@
     <Content Include="img\vote.jpg" />
     <Content Include="img\Bryan2.jpg" />
     <Content Include="Reporte.aspx" />
+    <Content Include="ReporteCantidadEC.aspx" />
+    <Content Include="ReporteGenero.aspx" />
     <Content Include="scripts\script.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\ClsCantidad.cs" />
     <Compile Include="Clases\ClsEncuestas.cs" />
+    <Compile Include="Clases\ClsReportes.cs" />
     <Compile Include="Clases\DBconn.cs" />
     <Compile Include="Contacto.aspx.cs">
       <DependentUpon>Contacto.aspx</DependentUpon>
@@ -140,6 +144,20 @@
     </Compile>
     <Compile Include="Reporte.aspx.designer.cs">
       <DependentUpon>Reporte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteCantidadEC.aspx.cs">
+      <DependentUpon>ReporteCantidadEC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReporteCantidadEC.aspx.designer.cs">
+      <DependentUpon>ReporteCantidadEC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteGenero.aspx.cs">
+      <DependentUpon>ReporteGenero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReporteGenero.aspx.designer.cs">
+      <DependentUpon>ReporteGenero.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
